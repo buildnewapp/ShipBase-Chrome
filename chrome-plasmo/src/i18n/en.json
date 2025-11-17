@@ -1,0 +1,15 @@
+{
+  "title": "Account",
+  "signIn": "Sign in",
+  "signingIn": "Waiting for sign-in...",
+  "language": "Language",
+  "theme": "Theme",
+  "system": "System",
+  "light": "Light",
+  "dark": "Dark",
+  "loggedInAs": "Logged in as",
+  "credits": "Credits",
+  "logout": "Log out",
+  "openInSidePanel": "Open in Side Panel (sticky)"
+}
+

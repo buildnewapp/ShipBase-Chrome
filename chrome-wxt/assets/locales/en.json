@@ -1,0 +1,21 @@
+{
+  "app_title": "Account",
+  "app_name": "Chrome",
+  "sign_in": "Sign In",
+  "signing_in": "Waiting for sign-in...",
+  "switch_language": "Language",
+  "signed_in_as": "Signed in as",
+  "sign_out": "Sign Out",
+  "retry": "Retry",
+  "credits": "Credits",
+  "pro": "Pro",
+  "vip": "VIP",
+  "left_credits": "Left Credits",
+  "open_login_page": "Open Login Page",
+  "theme": "Theme",
+  "theme_system": "System",
+  "theme_light": "Light",
+  "theme_dark": "Dark",
+  "open_in_sidebar": "Open in sidebar",
+  "open_official_website": "Open Website"
+}

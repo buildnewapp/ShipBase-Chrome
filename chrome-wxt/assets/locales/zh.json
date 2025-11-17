@@ -1,0 +1,21 @@
+{
+  "app_title": "账户",
+  "app_name": "Chrome",
+  "sign_in": "登录",
+  "signing_in": "等待登录中...",
+  "switch_language": "语言",
+  "signed_in_as": "已登录为",
+  "sign_out": "退出登录",
+  "retry": "重试",
+  "credits": "积分",
+  "pro": "专业版",
+  "vip": "VIP",
+  "left_credits": "剩余积分",
+  "open_login_page": "打开登录页面",
+  "theme": "主题",
+  "theme_system": "跟随系统",
+  "theme_light": "浅色",
+  "theme_dark": "深色",
+  "open_in_sidebar": "在侧边栏打开",
+  "open_official_website": "打开官网"
+}

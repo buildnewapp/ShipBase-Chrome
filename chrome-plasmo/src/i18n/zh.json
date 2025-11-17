@@ -1,0 +1,15 @@
+{
+  "title": "账户",
+  "signIn": "登录",
+  "signingIn": "等待登录中...",
+  "language": "语言",
+  "theme": "主题",
+  "system": "跟随系统",
+  "light": "浅色",
+  "dark": "深色",
+  "loggedInAs": "已登录",
+  "credits": "积分",
+  "logout": "退出登录",
+  "openInSidePanel": "在侧边栏打开（常驻）"
+}
+
