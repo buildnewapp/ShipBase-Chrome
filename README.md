@@ -11,6 +11,11 @@ Architecture highlights
 - Features: Web OAuth sign-in and display of basic user info (name/email/avatar) in popup/sidepanel.
 - Extension surfaces: background service worker, content scripts (where applicable), popup, side panel.
 
+Features
+- Sign in with [freesoragenerator](https://freesoragenerator.com/).
+- Flow: open `https://freesoragenerator.com/auth/signin?client_id=...&redirect_uri=chrome` → background polls `GET /api/auth/client?client_id=...` every ~3s → on success, calls `POST /api/get-user-info` with `Authorization: Bearer <token>` → UI shows nickname/email/avatar and credits.
+- For API details, visit the site: https://freesoragenerator.com/ (see `chrome-wxt/lib/config.ts`).
+
 Usage
 - Plasmo app
   - `cd chrome-plasmo && pnpm install`
@@ -32,6 +37,11 @@ Usage
 - 功能：网页授权登录（OAuth），在弹窗/侧边栏展示用户基础信息（姓名/邮箱/头像）。
 - 形态：后台 Service Worker、内容脚本（按需）、扩展弹窗、侧边面板。
 
+功能说明
+- 支持在 [freesoragenerator](https://freesoragenerator.com/)  进行授权登录。
+- 流程：打开 `https://freesoragenerator.com/auth/signin?client_id=...&redirect_uri=chrome` → 后台每约 3 秒轮询 `GET /api/auth/client?client_id=...` → 成功后以 `Authorization: Bearer <token>` 调用 `POST /api/get-user-info` → 在 UI 中展示昵称/邮箱/头像及剩余积分等。
+- 详细 API 请访问官网：https://freesoragenerator.com/（参见 `chrome-wxt/lib/config.ts`）。
+
 使用说明
 - Plasmo 项目
   - `cd chrome-plasmo && pnpm install`
@@ -43,4 +53,3 @@ Usage
   - 构建：`pnpm build`；压缩包：`pnpm zip`。
 
 > Tips / 提示：修改权限与主机域名时，请同步更新 Plasmo `manifest` 或 WXT 的 `wxt.config.ts` 并在浏览器中重新加载扩展。
-
