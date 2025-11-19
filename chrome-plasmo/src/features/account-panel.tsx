@@ -50,8 +50,15 @@ function useStorage<T>(key: string, defaultValue?: T) {
 }
 
 export const AccountPanel = () => {
-  const [lang, setLang] = useStorage<Lang>(STORAGE_KEYS.language, "en")
-  const t = useMemo(() => translations[(lang as Lang) || "en"], [lang])
+  const [lang, setLang] = useStorage<Lang>(STORAGE_KEYS.language)
+  const fallbackLang: Lang = useMemo(() => {
+    const ui = (chrome?.i18n?.getUILanguage?.() as string | undefined) || navigator.language || "en"
+    return ui.toLowerCase().startsWith("zh") ? "zh" : "en"
+  }, [])
+  useEffect(() => {
+    if (!lang) setLang(fallbackLang)
+  }, [lang, fallbackLang, setLang])
+  const t = useMemo(() => translations[(lang as Lang) || fallbackLang], [lang, fallbackLang])
 
   const [auth] = useStorage<AuthData>(STORAGE_KEYS.auth)
   const [user] = useStorage<UserInfo>(STORAGE_KEYS.user)

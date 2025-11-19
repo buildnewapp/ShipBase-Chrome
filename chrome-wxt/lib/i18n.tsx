@@ -18,11 +18,23 @@ type I18nContextValue = {
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
+function detectBrowserLocale(): Locale {
+  // 优先使用 Chrome UI 语言，其次使用浏览器语言
+  const ui = (typeof chrome !== "undefined" && chrome.i18n && typeof chrome.i18n.getUILanguage === "function"
+    ? chrome.i18n.getUILanguage()
+    : navigator.language) || "en";
+  return ui.toLowerCase().startsWith("zh") ? "zh" : "en";
+}
+
 function readLocale(): Locale {
   const fromStorage = (typeof localStorage !== "undefined" && localStorage.getItem(STORAGE_KEY)) as Locale | null;
   if (fromStorage === "en" || fromStorage === "zh") return fromStorage;
-  // 默认英文
-  return "en";
+  const inferred = detectBrowserLocale();
+  // 将首次推断的语言持久化，确保后续一致
+  try {
+    localStorage.setItem(STORAGE_KEY, inferred);
+  } catch {}
+  return inferred;
 }
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
