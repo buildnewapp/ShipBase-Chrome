@@ -33,6 +33,9 @@
     "typescript": "5.3.3"
   },
   "manifest": {
+    "default_locale": "en",
+    "name": "__MSG_extName__",
+    "description": "__MSG_extDescription__",
     "host_permissions": [
       "https://*/*"
     ],

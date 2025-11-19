@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Chrome",
+    "description": "Extension name (English)"
+  },
+  "extDescription": {
+    "message": "A basic Plasmo extension.",
+    "description": "Extension description (English)"
+  }
+}
+

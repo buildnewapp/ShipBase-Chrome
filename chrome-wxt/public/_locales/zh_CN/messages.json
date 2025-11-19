@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "chrome-wxt 扩展",
+    "description": "扩展名称（简体中文）"
+  },
+  "extDescription": {
+    "message": "manifest.json 描述",
+    "description": "扩展描述（简体中文）"
+  }
+}
+

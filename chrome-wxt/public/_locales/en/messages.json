@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "chrome-wxt",
+    "description": "Extension name (English)"
+  },
+  "extDescription": {
+    "message": "manifest.json description",
+    "description": "Extension description (English)"
+  }
+}
+
